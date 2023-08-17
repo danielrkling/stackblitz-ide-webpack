@@ -164,6 +164,7 @@ export default class File {
 			delete globals.files[this.path()];
 			delete this.parentFolder.files[this.name()];
 			this.container.remove();
+			// @ts-ignore
 			await this.handle.remove({ recursive: true });
 		}
 	}
@@ -186,7 +187,7 @@ export default class File {
 			this.unloadModel();
 			delete globals.files[this.path()];
 			delete this.parentFolder.files[this.name()];
-
+// @ts-ignore
 			await this.handle.move(fileName);
 			this.container.remove();
 			await this.parentFolder.loadFile(this)

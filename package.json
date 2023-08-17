@@ -4,13 +4,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "cd dist && live-server"
-
   },
   "devDependencies": {
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@rollup/browser": "^3.28.0",
     "@types/filesystem": "^0.0.32",
     "@types/wicg-file-system-access": "^2020.9.6",
     "http-server": "^14.1.1",

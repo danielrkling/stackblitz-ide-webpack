@@ -235,6 +235,7 @@ export default class Folder {
       }
 
       this.container.remove();
+      // @ts-ignore
       await this.handle.remove({ recursive: true });
     }
 
@@ -287,3 +288,4 @@ export default class Folder {
     }
   }
 }
+
