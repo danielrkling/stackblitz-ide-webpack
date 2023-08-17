@@ -4,6 +4,7 @@ import './editor'
 import globals from './globals';
 import Folder from './folder';
 //import './compile'
+import './index.css';
 
 
 

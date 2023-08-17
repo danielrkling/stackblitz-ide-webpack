@@ -226,10 +226,12 @@ export default class Folder {
   async remove(hideWarning?: boolean) {
     if (hideWarning || confirm(`Are you sure you want to delete ${this.name()}`)) {
 
+      // @ts-ignore
       for await (const [key, file] of Object.entries(this.files)) {
         await file.remove(true)
       }
 
+      // @ts-ignore
       for await (const [key, folder] of Object.entries(this.folders)) {
         await folder.remove(true)
       }
