@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Editor 2</title>
+  <link rel="icon" href="./favicon.ico.png" type="image/png" />
+  <link rel="stylesheet" href="./dist/app.css">
+
+
+  <link rel="stylesheet" data-name="vs/editor/editor.main"
+    href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.41.0/min/vs/editor/editor.main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="sidebar">
+      <div class="button-row">
+
+        <!-- <span id="autoSave" class="fa-stack fa-3x">
+          <i class="fa-solid fa-rotate fa-stack-2x"></i>
+          <i class="fa-solid fa-floppy-disk fa-stack-1x"></i>
+          
+        </span> -->
+        <button id="autoSave"><i class="fa-solid fa-floppy-disk"></i></button>
+        <button id="compileButton"><i class="fa-solid fa-gear"></i></button>
+        <button id="splitView"><i class="fa-solid fa-table-columns"></i></button>
+        <button id="viewLog"><i class="fa-solid fa-terminal"></i></button>
+        <!-- <input id="autoSave" type="checkbox" checked><label for="autoSave">Auto Save </label> -->
+
+      </div>
+      <div id="tree">
+        <button id="openFolder" ><i class="fa-solid fa-folder-tree fa-lg "></i>Open Directory</button>
+      </div>
+      <div class="button-row">
+        <button id="npmButton"><i class="fa-brands fa-npm"></i></button>
+        <input id='npmPackageName' placeholder="package-name">
+      </div>
+    </div>
+    <div id="resizer"></div>
+
+    <div id="container">
+      <div id="leftContainer">
+        <div id="leftTabs" class="tabs"></div>
+        <div id="leftEditor"></div>
+      </div>
+      <div id="rightContainer" class="hidden">
+        <div id="rightTabs" class="tabs"></div>
+        <div id="rightEditor"></div>
+      </div>
+    </div>
+  </div>
+  <div id='previewContainer' class='hidden'>
+    <div id='preview' class="markdown-body"></div>
+  </div>
+  <div id='logContainer' class='hidden'>
+    <div id='log'></div>
+  </div>
+
+  <!-- MONACO JS -->
+  <script>
+    var require = { paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.41.0/min/vs' } };  
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.41.0/min/vs/loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.41.0/min/vs/editor/editor.main.nls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.41.0/min/vs/editor/editor.main.js"></script>ript>
+
+
+  <script type="text/javascript" src="./dist/app.js"></script>
+
+</body>
+
+</html>
